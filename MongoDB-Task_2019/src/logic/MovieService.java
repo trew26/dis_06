@@ -98,7 +98,7 @@ public class MovieService extends MovieServiceBase {
 	 */
 	public FindIterable<Document> getBestMovies(int minVotes, double minRating, int limit) {
 		//TODO : implement
-		FindIterable<Document>  result = null;
+		FindIterable<Document>  result = movies.find(and(gt("rating", minRating), gt("votes", minVotes))).limit(limit);
 		return result;
 	}
 
