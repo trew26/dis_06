@@ -208,8 +208,13 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable getByTweetsKeywordRegex(String keyword, int limit) {
-		//TODO : implement
-		FindIterable<Document>  result = null;
+		//implemented
+		System.out.println("getByTweetsKeywordRegex, keyword: " + keyword);
+
+		Document query = new Document("tweets.text", Pattern.compile(".*" + keyword + ".*", Pattern.CASE_INSENSITIVE));
+		Document projection = new Document("title", true);
+		//FindIterable<Document> result = movies.find(query).projection(projection).limit(limit);
+		FindIterable<Document> result = movies.find(query).limit(limit);
 		return result;
 	}
 

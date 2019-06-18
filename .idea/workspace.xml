@@ -18,12 +18,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="155" column="77" selection-start-line="155" selection-start-column="77" selection-end-line="155" selection-end-column="77" />
+            <state relative-caret-position="393">
+              <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#14531#14532#0" expanded="true" />
-                <element signature="e#14679#14680#0" expanded="true" />
+                <element signature="docComment;method#findMovieByTitle#0;class#MovieService#0" />
+                <element signature="docComment;method#getBestMovies#0;class#MovieService#0" />
+                <element signature="docComment;method#getByGenre#0;class#MovieService#0" />
+                <element signature="docComment;method#searchByPrefix#0;class#MovieService#0" />
+                <element signature="docComment;method#getTweetedMovies#0;class#MovieService#0" />
+                <element signature="e#14893#14894#0" expanded="true" />
+                <element signature="e#14913#14914#0" expanded="true" />
+                <element signature="e#15041#15042#0" expanded="true" />
+                <element signature="e#15061#15062#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -32,17 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/web/RestServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-852">
-              <caret line="175" selection-start-line="175" selection-end-line="175" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/web/map.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="198" column="18" selection-start-line="198" selection-start-column="8" selection-end-line="198" selection-end-column="18" />
+            <state relative-caret-position="294">
+              <caret line="381" column="5" lean-forward="true" selection-start-line="381" selection-start-column="5" selection-end-line="381" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -57,6 +55,8 @@
       <find>#suggest(String, int)</find>
       <find>//TODO : implement</find>
       <find>#suggest</find>
+      <find>TODO</find>
+      <find>searchTweets</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,11 +228,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26760563" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.30444205" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.25460455" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
@@ -246,6 +246,18 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java</url>
+          <line>164</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/web/map.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -254,21 +266,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-io-9.0.0.RC2.jar!/org/eclipse/jetty/io/AbstractConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="185" selection-start-line="185" selection-end-line="185" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-util-9.0.0.RC2.jar!/org/eclipse/jetty/util/thread/QueuedThreadPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="e#15885#15886#0" expanded="true" />
+            <element signature="e#15910#15911#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/HttpConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/HttpChannel.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="151" column="16" selection-start-line="151" selection-start-column="16" selection-end-line="151" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/Server.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="348" selection-start-line="348" selection-end-line="348" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/handler/HandlerWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/handler/HandlerList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/handler/ScopedHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/handler/ContextHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="734" selection-start-line="734" selection-end-line="734" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/web/RestServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-852">
-          <caret line="175" selection-start-line="175" selection-end-line="175" />
+        <state relative-caret-position="294">
+          <caret line="381" column="5" lean-forward="true" selection-start-line="381" selection-start-column="5" selection-end-line="381" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="155" column="77" selection-start-line="155" selection-start-column="77" selection-end-line="155" selection-end-column="77" />
+        <state relative-caret-position="393">
+          <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#14531#14532#0" expanded="true" />
-            <element signature="e#14679#14680#0" expanded="true" />
+            <element signature="docComment;method#findMovieByTitle#0;class#MovieService#0" />
+            <element signature="docComment;method#getBestMovies#0;class#MovieService#0" />
+            <element signature="docComment;method#getByGenre#0;class#MovieService#0" />
+            <element signature="docComment;method#searchByPrefix#0;class#MovieService#0" />
+            <element signature="docComment;method#getTweetedMovies#0;class#MovieService#0" />
+            <element signature="e#14893#14894#0" expanded="true" />
+            <element signature="e#14913#14914#0" expanded="true" />
+            <element signature="e#15041#15042#0" expanded="true" />
+            <element signature="e#15061#15062#0" expanded="true" />
           </folding>
         </state>
       </provider>
