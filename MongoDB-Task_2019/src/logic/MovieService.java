@@ -77,6 +77,7 @@ public class MovieService extends MovieServiceBase {
 	 */
 	public Document findMovieByTitle(String title) {
 		//implemented
+		System.out.println("Title: " + title);
 		Document result = movies.find(eq("title", title)).first();
 		return result;
 	}
@@ -114,7 +115,7 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable<Document> getByGenre(String genreList, int limit) {
-		// implemented
+		//implemented
 		List<String> genres = Arrays.asList(genreList.split(","));
 		// replace non visible characters
 		for (String s : genres) {
@@ -138,9 +139,12 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable<Document> searchByPrefix(String titlePrefix, int limit) {
-		//TODO : implement
-		Document prefixQuery = null;
-		FindIterable<Document> result = null;
+		System.out.println("Prefix: " + titlePrefix);
+
+		Document query = new Document("title", Pattern.compile("^" + titlePrefix + ".*"));
+		Document projection = new Document("title", true);
+		//FindIterable<Document> result = movies.find(query).projection(projection).limit(limit);
+		FindIterable<Document> result = movies.find(query).limit(limit);
 		return result;
 	}
 

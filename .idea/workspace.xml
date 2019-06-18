@@ -18,10 +18,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+            <state relative-caret-position="178">
+              <caret line="146" column="72" lean-forward="true" selection-start-line="146" selection-start-column="72" selection-end-line="146" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#14289#14290#0" expanded="true" />
+                <element signature="e#14437#14438#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,6 +54,8 @@
       <find>queryMovie</find>
       <find>/movies</find>
       <find>ratingGreater</find>
+      <find>#suggest(String, int)</find>
+      <find>#suggest</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,6 +131,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -226,10 +231,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+        <state relative-caret-position="178">
+          <caret line="146" column="72" lean-forward="true" selection-start-line="146" selection-start-column="72" selection-end-line="146" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#14289#14290#0" expanded="true" />
+            <element signature="e#14437#14438#0" expanded="true" />
           </folding>
         </state>
       </provider>
