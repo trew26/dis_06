@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
+            <state relative-caret-position="199">
+              <caret line="179" column="74" selection-start-line="179" selection-start-column="74" selection-end-line="179" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#findMovieByTitle#0;class#MovieService#0" />
@@ -39,8 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/web/RestServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="381" column="5" lean-forward="true" selection-start-line="381" selection-start-column="5" selection-end-line="381" selection-end-column="5" />
+            <state relative-caret-position="267">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/handler/ContextHandler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="789" selection-start-line="789" selection-end-line="789" />
             </state>
           </provider>
         </entry>
@@ -57,6 +66,9 @@
       <find>#suggest</find>
       <find>TODO</find>
       <find>searchTweets</find>
+      <find>f</find>
+      <find>update</find>
+      <find>comment</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,6 +267,12 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java</url>
+          <line>185</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -328,22 +346,22 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/MongoDB-Task_2019/lib/jetty-server-9.0.0.RC2.jar!/org/eclipse/jetty/server/handler/ContextHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="897">
-          <caret line="734" selection-start-line="734" selection-end-line="734" />
+        <state relative-caret-position="217">
+          <caret line="789" selection-start-line="789" selection-end-line="789" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/web/RestServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="381" column="5" lean-forward="true" selection-start-line="381" selection-start-column="5" selection-end-line="381" selection-end-column="5" />
+        <state relative-caret-position="267">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MongoDB-Task_2019/src/logic/MovieService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="213" column="70" selection-start-line="213" selection-start-column="70" selection-end-line="213" selection-end-column="70" />
+        <state relative-caret-position="199">
+          <caret line="179" column="74" selection-start-line="179" selection-start-column="74" selection-end-line="179" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#findMovieByTitle#0;class#MovieService#0" />

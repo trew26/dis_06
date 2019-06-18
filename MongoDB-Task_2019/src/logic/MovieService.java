@@ -176,9 +176,13 @@ public class MovieService extends MovieServiceBase {
 	 *            the comment to save
 	 */
 	public void saveMovieComment(String id, String comment) {
-		// TODO implement
-		Document query = null;
-		Document update = null;
+		System.out.println("saveMovieComment, id: " + id + ", comment: " + comment);
+		// TODO not yet working properly? Save does not appear to persists
+		Document query = new Document("id", id);
+
+		Document update = new Document();
+		update.append("$set", new Document().append("comment", comment));
+
 		movies.updateOne(query, update);
 	}
 
