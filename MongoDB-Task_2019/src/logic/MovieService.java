@@ -77,7 +77,8 @@ public class MovieService extends MovieServiceBase {
 	 */
 	public Document findMovieByTitle(String title) {
 		//implemented
-		System.out.println("Title: " + title);
+		System.out.println("findMovieByTitle, title: " + title);
+
 		Document result = movies.find(eq("title", title)).first();
 		return result;
 	}
@@ -100,6 +101,8 @@ public class MovieService extends MovieServiceBase {
 	 */
 	public FindIterable<Document> getBestMovies(int minVotes, double minRating, int limit) {
 		//implemented
+		System.out.println("getBestMovies, minVotes: " + minVotes + ", minRating: " + minRating);
+
 		FindIterable<Document>  result = movies.find(and(gt("rating", minRating), gt("votes", minVotes))).limit(limit);
 		return result;
 	}
@@ -121,7 +124,8 @@ public class MovieService extends MovieServiceBase {
 		for (String s : genres) {
 			genres.set(genres.indexOf(s), s.replaceAll("\\s+",""));
 		}
-		System.out.println("generes: " + genres);
+		System.out.println("getByGenre, Genres: " + genres);
+
 		FindIterable<Document> result = movies.find(all("genre", genres)).limit(limit);
 		return result;
 	}
@@ -139,7 +143,7 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable<Document> searchByPrefix(String titlePrefix, int limit) {
-		System.out.println("Prefix: " + titlePrefix);
+		System.out.println("searchByPrefix, Prefix: " + titlePrefix);
 
 		Document query = new Document("title", Pattern.compile("^" + titlePrefix + ".*"));
 		Document projection = new Document("title", true);
@@ -155,8 +159,10 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable getTweetedMovies() {
-		//TODO : implement
-		FindIterable<Document>  result = null;
+		//implemented
+		System.out.println("getTweetedMovies (movies that have tweets attribute)");
+
+		FindIterable<Document> result = movies.find(exists("tweets"));
 		return result;
 	}
 
