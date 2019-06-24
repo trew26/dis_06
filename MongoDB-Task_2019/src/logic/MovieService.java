@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
 
+import com.mongodb.client.model.Sorts;
+import com.mongodb.gridfs.GridFS;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -180,10 +182,16 @@ public class MovieService extends MovieServiceBase {
 		// TODO not yet working properly? Save does not appear to persists
 		Document query = new Document("id", id);
 
-		Document update = new Document();
-		update.append("$set", new Document().append("comment", comment));
+		Document setData = new Document();
+		setData.append("comment", comment);
 
-		movies.updateOne(query, update);
+		Document update = new Document();
+		update.append("$set", setData);
+
+		//Document update = new Document();
+		//update.append("$set", new Document().append("comment", comment));
+
+		//movies.updateOne(query, update);
 	}
 
 
@@ -237,10 +245,10 @@ public class MovieService extends MovieServiceBase {
 	public FindIterable<Document> searchTweets(String query) {
 		// Create a text index on the "text" property of tweets
 		tweets.createIndex(new Document("text", "text").append("user.name", "text"));
-		
-		// TODO: implement
-		FindIterable<Document> result = null;
-		
+
+		Document q = new Document(query, 0);
+		FindIterable<Document> result = tweets.find(q);
+
 		return result;
 	}
 
@@ -253,8 +261,7 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable<Document>  getNewestTweets(int limit) {
-		//TODO : implement
-		FindIterable<Document>  result = null;
+		FindIterable<Document>  result = movies.find().sort(Sorts.descending("_id")).limit(limit);
 		return result;
 	}
 
@@ -267,8 +274,8 @@ public class MovieService extends MovieServiceBase {
 	 * @return the FindIterable for the query
 	 */
 	public FindIterable<Document>  getGeotaggedTweets(int limit) {
-		//TODO : implement
-		FindIterable<Document>  result = null;
+		Document q = new Document("coordinates", true);
+		FindIterable<Document>  result = tweets.find(q).limit(limit);
 		return result;
 	}
 
@@ -286,7 +293,8 @@ public class MovieService extends MovieServiceBase {
 	public void saveFile(String name, InputStream inputStream, String contentType) {
 		GridFSUploadOptions options = new GridFSUploadOptions().chunkSizeBytes(358400).metadata(new Document("contentType", contentType));
 		// TODO IMPLEMENT
-	    ObjectId fileId = null; 
+
+	    ObjectId fileId = fs.uploadFromStream(name, inputStream, options);
 	}
 
 	/**
@@ -299,7 +307,7 @@ public class MovieService extends MovieServiceBase {
 	 */
 	public GridFSFile getFile(String name) {
 		// TODO: Implement
-		GridFSFile file = null;
+		GridFSFile file = fs.find(eq("name",name)).first();
 		if (file == null) {
 			file = null;
 		}
